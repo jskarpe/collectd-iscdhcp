@@ -1,7 +1,8 @@
 # collectd-iscdhcp
 
 `collectd-iscdhcp` is a `collectd-python` plugin for pushing statistics 
-from the `dhcpd-pools` utility to collectd. 
+from the [dhcpd-pools](http://dhcpd-pools.sourceforge.net/) utility to 
+collectd. 
 
 ## Installation
 
