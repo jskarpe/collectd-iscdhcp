@@ -3,7 +3,7 @@ from setuptools import setup
 
 
 setup(name='collectd-iscdhcp',
-      version='0.0.7',
+      version='0.1.0',
       description='CollectD plugin for ISC DHCP',
       author='Jon Skarpeteig',
       author_email='jon.skarpeteig@gmail.com',
