@@ -14,8 +14,7 @@ def read(data=None):
     vl = collectd.Values(type='gauge')
     vl.plugin = 'iscdhcp'
 
-    dhcpd_pools_bin = os.path.realpath(__file__ + '/../../bin/dhcpd-pools')
-    out = subprocess.Popen([dhcpd_pools_bin, '-c', '/etc/dhcp/dhcpd.conf', '-f', 'j'], stdout=subprocess.PIPE).communicate()[0]
+    out = subprocess.Popen(['dhcpd-pools', '-c', '/etc/dhcp/dhcpd.conf', '-f', 'j'], stdout=subprocess.PIPE).communicate()[0]
     j = json.loads(out)
 
     s = j['summary']
