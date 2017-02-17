@@ -13,10 +13,9 @@ setup(name='collectd-iscdhcp',
       ],
       scripts=['bin/dhcpd-pools'],
       package_dir={'collectd_iscdhcp': 'collectd_iscdhcp'},
-      keywords='collectd-iscdhcp',
+      keywords=['collectd-iscdhcp', 'collectd', 'isc', 'dhcp', 'metrics'],
       include_package_data=True,
       install_requires=[
-          'isc_dhcp_leases',
           'collectd'
       ],
       )
