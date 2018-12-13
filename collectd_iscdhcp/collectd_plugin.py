@@ -47,6 +47,20 @@ def read(data=None):
         vl.dispatch(type='percent', type_instance='free_percent',
                     values=[free_percent])
 
+    for sharednetwork in j['shared-networks']:
+        vl.plugin_instance = sharednetwork['location']
+        vl.dispatch(type='count', type_instance='total',
+                    values=[sharednetwork['defined']])
+        vl.dispatch(type='count', type_instance='used',
+                    values=[sharednetwork['used']])
+        vl.dispatch(type='count', type_instance='free',
+                    values=[sharednetwork['free']])
+        used_percent = 100 * float(sharednetwork['used'])/float(sharednetwork['defined'])
+        vl.dispatch(type='percent', type_instance='used_percent',
+                    values=[used_percent])
+        free_percent = 100 * float(sharednetwork['free']) / float(sharednetwork['defined'])
+        vl.dispatch(type='percent', type_instance='free_percent',
+                    values=[free_percent])
 
 collectd.register_config(configure)
 collectd.register_read(read)
