@@ -19,10 +19,10 @@ then iscdhcp.conf should be placed in the managed_config folder.
 
 Example configuration file    
 
-    # iscdhcp.conf
-    LoadPlugin python
-    <Plugin python>
-        ModulePath "/usr/local/lib/python2.7/dist-packages"
-        Interactive False
-        Import "collectd_iscdhcp.collectd_plugin"
-    </Plugin>
+# iscdhcp.conf
+LoadPlugin python
+<Plugin python>
+    ModulePath "/usr/local/lib/python2.7/dist-packages"
+    Interactive False
+    Import "collectd_iscdhcp.collectd_plugin"
+</Plugin>
