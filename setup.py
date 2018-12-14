@@ -3,15 +3,14 @@ from setuptools import setup
 
 
 setup(name='collectd-iscdhcp',
-      version='0.1.0',
+      version='0.1.1',
       description='CollectD plugin for ISC DHCP',
-      author='Jon Skarpeteig',
-      author_email='jon.skarpeteig@gmail.com',
-      url='https://github.com/Yuav/collectd-iscdhcp',
+      author='Jose Manuel Agudo',
+      author_email='jagudo@gmail.com',
+      url='https://github.com/jmagudo/collectd-iscdhcp',
       packages=[
         'collectd_iscdhcp',
       ],
-      scripts=['bin/dhcpd-pools'],
       package_dir={'collectd_iscdhcp': 'collectd_iscdhcp'},
       keywords=['collectd-iscdhcp', 'collectd', 'isc', 'dhcp', 'metrics'],
       include_package_data=True,
