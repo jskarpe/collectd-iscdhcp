@@ -24,5 +24,5 @@ Example configuration file
     <Plugin python>		
         ModulePath "/usr/local/lib/python2.7/dist-packages"
         Interactive False		
-        Import "collectd_iscdhcp"		
+        Import "collectd_iscdhcp.collectd_plugin"		
     </Plugin>
